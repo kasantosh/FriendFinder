@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kasantosh/FriendFinder/issues"
   },
-  "homepage": "https://github.com/kasantosh/FriendFinder#readme"
+  "homepage": "https://github.com/kasantosh/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
