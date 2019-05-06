@@ -10,6 +10,8 @@ require("./app/routing/htmlRoutes")(app);
 
 require("./app/routing/apiRoutes")(app);
 
+app.use("/", express.static(path.join(__dirname, "")));
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, function() {
   console.log(`Listening on port: ${PORT}`);

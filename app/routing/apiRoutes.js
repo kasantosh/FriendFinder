@@ -29,6 +29,6 @@ module.exports = function(app) {
 
     friends.push(friend);
 
-    res.send(friends[index].name);
+    res.send(friends[index]);
   });
 };

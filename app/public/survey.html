@@ -10,11 +10,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Survey</title>
   </head>
   <body>
@@ -31,7 +32,7 @@
         <div class="form-group">
           <label><h5>Link to photo image (Required)</h5></label>
           <br />
-          <input type="text" class="form-control" id="photolink" />
+          <input type="text" class="form-control" id="photo" />
         </div>
         <hr />
 
@@ -44,12 +45,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q1">
+            <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5</option>
           </select>
         </div>
         <hr />
@@ -64,12 +65,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q2">
+            <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
@@ -85,12 +86,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q3">
+            <option>1 </option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
@@ -104,12 +105,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q4">
+            <option>1 </option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5</option>
           </select>
         </div>
         <hr />
@@ -123,12 +124,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q5">
+            <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
@@ -143,12 +144,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q6">
+            <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5</option>
           </select>
         </div>
         <hr />
@@ -164,12 +165,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q7">
+            <option>1 </option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
@@ -183,12 +184,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q8">
+            <option>1 </option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
@@ -203,12 +204,12 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q9">
+            <option>1 </option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
@@ -224,30 +225,55 @@
             </h5></label
           >
           <br />
-          <select class="">
-            <option>1 (Strongly Disagree)</option>
+          <select class="form-control w-25" id="q10">
+            <option>1 </option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
-            <option>5 (Strongly Agree)</option>
+            <option>5 </option>
           </select>
         </div>
         <hr />
         <div class="form-group w-100">
           <button
             class="btn btn-primary form-group w-100"
-            href="#"
-            type="button"
             id="surveyform-submit"
+            data-target="modalpopup"
+            data-toggle="modal"
           >
             <i class="fa fa-check-square"></i>
             Submit
           </button>
         </div>
       </form>
-      <a href="">API Friends List</a>
+
+      <!-- modal pop-up -->
+      <div class="modal" tabindex="-1" role="dialog" id="modalpopup">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your best match</h5>
+            </div>
+            <!-- Name goes here -->
+            <div class="modal-body" id="modalname"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/api/friends">API Friends List</a>
       |
-      <a href="">API Github Repo</a>
+      <a href="https://github.com/kasantosh/FriendFinder" target="_blank"
+        >API Github Repo</a
+      >
     </div>
+    <script src="../../forms.js"></script>
   </body>
 </html>
