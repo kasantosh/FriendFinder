@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <title>Survey</title>
   </head>
   <body>
@@ -238,8 +239,8 @@
           <button
             class="btn btn-primary form-group w-100"
             id="surveyform-submit"
-            data-target="modalpopup"
             data-toggle="modal"
+            data-target="#exampleModal"
           >
             <i class="fa fa-check-square"></i>
             Submit
@@ -248,18 +249,29 @@
       </form>
 
       <!-- modal pop-up -->
-      <div class="modal" tabindex="-1" role="dialog" id="modalpopup">
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Your best match</h5>
+              <h5 class="modal-title" id="exampleModalLabel">
+                Your best match
+              </h5>
             </div>
-            <!-- Name goes here -->
-            <div class="modal-body" id="modalname"></div>
+            <div class="modal-body text-center" id="modalbody"></div>
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-secondary close-btn"
                 data-dismiss="modal"
               >
                 Close

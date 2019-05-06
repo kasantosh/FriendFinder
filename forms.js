@@ -67,7 +67,16 @@ $(document).ready(function() {
     // console.log(newPerson);
     $.post("/api/friends", newPerson, function(data) {
       console.log(data);
-      $("#modalname").text(data);
+      var name = $("<h4>");
+      name.text(data.name);
+      var image = $(
+        `<img src = '${data.photo}' alt = '${data.name}' class = "imgstyle"/>`
+      );
+      $("#modalbody").append(name, image);
     });
+  });
+
+  $(".close-btn").on("click", function() {
+    $("#modalbody").empty();
   });
 });
