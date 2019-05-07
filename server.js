@@ -10,6 +10,7 @@ require("./app/routing/htmlRoutes")(app);
 
 require("./app/routing/apiRoutes")(app);
 
+// FOllowing code accepts all files and folders in the current directory
 app.use("/", express.static(path.join(__dirname, "")));
 
 const PORT = process.env.PORT || 5000;
