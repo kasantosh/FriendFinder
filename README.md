@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-\_\_\_# Friend Finder
+# Friend Finder
 
 This app is created using an express server. The user enters his/her data into the fields and also answers 10 survey questions.
 
@@ -62,4 +61,3 @@ File Structure:
     - node_modules
     - package.json
     - server.js
->>>>>>> 886a0afda35f9cc4ed328d65e306d0b2bab48f79
