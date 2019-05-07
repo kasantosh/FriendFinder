@@ -27,6 +27,10 @@ FriendFinder - .gitignore - app - data - friends.js - public - home.html - surve
 
 =======
 
+=======
+
+> > > > > > > 61a8ea43ec950025bbc1013b1085282d9fcb836d
+
 # Friend Finder
 
 This app is created using an express server. The user enters his/her data into the fields and also answers 10 survey questions.
@@ -50,4 +54,23 @@ Total Difference: 2 + 1 + 2 = 5
 Applications used: HTML, CSS, Bootstrap, JQuery, Javascript, Express.
 
 File Structure:
+<<<<<<< HEAD
 FriendFinder - .gitignore - app - data - friends.js - public - home.html - survey.html - routing - apiRoutes.js - htmlRoutes.js - node_modules - package.json - server.js
+
+---
+
+FriendFinder
+
+    - .gitignore
+    - app
+      - data
+        - friends.js
+      - public
+        - home.html
+        - survey.html
+      - routing
+        - apiRoutes.js
+        - htmlRoutes.js
+    - node_modules
+    - package.json
+    - server.js
